@@ -1,24 +1,23 @@
 package com.springboot.ems.service;
 
-import com.springboot.ems.entity.Employee;
-import com.springboot.ems.payload.EmployeeRequest;
+import com.springboot.ems.dto.EmployeeDto;
 
 import java.util.List;
 
 public interface EmployeeService {
 
     //method that saves an employee object of the Employee Class created in the model package.
-    Employee saveEmployee(EmployeeRequest employeeRequest);
+    EmployeeDto saveEmployee(EmployeeDto employeeRequest);
 
     //method to get all of the employees
 
-    List<Employee> getAllEmployees();
+    List<EmployeeDto> getAllEmployees();
 
     //method to get single employee
-    Employee getEmployeeById(long employeeId);
+    EmployeeDto getEmployeeById(long employeeId);
 
-    Employee updateEmployee(Employee employee, long employeeId);
+    EmployeeDto updateEmployee(EmployeeDto employeeDto, long employeeId);
 
-    void deleteEmployee(long employeeId);
+    String deleteEmployee(long employeeId);
 
 }
